@@ -39,8 +39,22 @@ Input data file containing the pre-averaged logFC values for key drug transporte
 ### `cimetidine_simcyp (1).csv`
 Reference data file containing SimCYP simulation results for comparison.
 
+### Visualization Files
+
+#### `output1.png`
+Baseline model validation plot showing the best-fitted PBPK model against observed experimental data, demonstrating excellent model performance.
+
+#### `output.png`
+Gene expression changes visualization displaying logFC values for key transporters and enzymes under microgravity conditions.
+
+#### `comp.png`
+Comprehensive comparison plot showing plasma concentration-time profiles for both baseline and microgravity conditions with Monte Carlo confidence intervals.
+
+#### `TransportersBarChart.png`
+Quantitative bar chart comparing individual transporter and enzyme clearance values between Earth and microgravity conditions.
+
 ### `README.md`
-This documentation file.
+This comprehensive documentation file with project overview, usage instructions, and visualization gallery.
 
 ## How to Use
 
@@ -75,23 +89,53 @@ A positive logFC value indicates up-regulation (increased clearance), while a ne
 
 ## Example Results
 
-The primary output is a comparative plot showing the predicted plasma concentration curves for both conditions.
+The repository contains comprehensive visualizations demonstrating the impact of microgravity on cimetidine pharmacokinetics:
 
-**Predicted Impact of Microgravity on Cimetidine PK**
+### Key Visualizations
 
-This plot typically shows that microgravity leads to a higher peak concentration (Cmax) and greater overall drug exposure (AUC), indicating impaired drug clearance.
+#### 1. Baseline Model Validation
+![Baseline Model](output1.png)
+**Figure 1**: Best-fitted baseline PBPK model validated against observed experimental data, showing excellent agreement between model predictions and measured plasma concentrations.
+
+#### 2. Transporter Changes Under Microgravity
+![Transporter Changes](output.png)
+**Figure 2**: Gene expression changes (logFC values) for key drug transporters and metabolic enzymes under microgravity conditions, showing the molecular basis for altered pharmacokinetics.
+
+#### 3. Plasma Concentration Comparison
+![Concentration Comparison](comp.png)
+**Figure 3**: Direct comparison of cimetidine plasma concentration profiles between baseline (Earth) and microgravity conditions, including Monte Carlo confidence intervals representing population variability.
+
+#### 4. Quantitative Transporter Analysis
+![Transporter Bar Chart](TransportersBarChart.png)
+**Figure 4**: Bar chart comparison showing quantitative changes in individual transporter and enzyme clearance values between Earth and microgravity conditions.
+
+### Key Findings
+
+The visualizations demonstrate that microgravity leads to:
+- **Higher peak concentration (Cmax)** due to reduced metabolic clearance
+- **Greater overall drug exposure (AUC)** indicating impaired drug elimination
+- **Altered transporter function** with decreased CYP enzyme activity and modified efflux transport
+- **Clinical significance** requiring potential dose adjustments for space missions
 
 ## Repository Structure
 
 ```
 Cimetidine-PharmacoKineticModel/
-├── README.md
+├── README.md                      # Project documentation
 ├── CimitadineModel.ipynb          # Main analysis notebook
 ├── CimetidineKineticModel.py      # Core PBPK model class
-├── cimetidine_obs.csv             # Observed experimental data
-├── cimetidine_simcyp (1).csv      # SimCYP reference data
-├── CIMItadine (1).xlsx            # Gene expression data
-└── logFC_average.xlsx             # Processed logFC values
+│
+├── Data Files/
+│   ├── cimetidine_obs.csv         # Observed experimental data
+│   ├── cimetidine_simcyp (1).csv  # SimCYP reference data
+│   ├── CIMItadine (1).xlsx        # Gene expression data
+│   └── logFC_average.xlsx         # Processed logFC values
+│
+└── Visualizations/
+    ├── output1.png                # Baseline model validation
+    ├── output.png                 # Transporter gene expression changes
+    ├── comp.png                   # Plasma concentration comparison
+    └── TransportersBarChart.png   # Quantitative transporter analysis
 ```
 
 ## Contributing
