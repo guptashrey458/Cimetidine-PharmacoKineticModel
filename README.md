@@ -19,6 +19,12 @@ The analysis workflow is as follows:
 - **Data-Driven Validation**: The baseline model is fitted and validated against real-world observed experimental data.
 - **Comprehensive Visualization**: Generates clear plots comparing the baseline and microgravity scenarios, including changes in PK metrics and underlying parameters.
 
+## System Diagram
+
+![System Diagram](mermaid-diagram-2025-08-13-012510.png)
+
+This diagram summarizes the data flow: observed data and gene expression feed the PBPK model; microgravity logFC modifies clearances; simulations produce baseline vs microgravity outputs with Monte Carlo variability.
+
 ## Files in This Project
 
 ### `CimitadineModel.ipynb`
